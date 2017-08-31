@@ -155,7 +155,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
-        public MyPagerAdapter(FragmentManager fm) {
+        private MyPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
