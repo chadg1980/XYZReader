@@ -2,24 +2,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/text_white"
     android:orientation="vertical">
-
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_backdrop_height"
         android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        style="@style/Theme.XYZTheme.activity_list_actionbar"
+        android:elevation="8dp">
 
         <android.support.design.widget.CollapsingToolbarLayout
+
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:id="@+id/main.imageview.placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_backdrop_height"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"
+                android:tint="@color/scrim"
+                app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -27,7 +36,6 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_marginBottom="@dimen/list_toolbar_top_bottom_margin"
                 android:layout_marginTop="@dimen/list_toolbar_top_bottom_margin"
-                android:background="@color/theme_primary"
                 app:layout_scrollFlags="scroll|enterAlways" />
 
             <ImageView
@@ -43,10 +51,7 @@
                 app:layout_collapseMode="parallax" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
-
     </android.support.design.widget.AppBarLayout>
-
-
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
@@ -54,13 +59,12 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.RecyclerView
+
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="@dimen/list_side_margin"
-            android:paddingRight="@dimen/list_side_margin"
-            android:scrollbarStyle="outsideOverlay" />
+            android:paddingRight="@dimen/list_side_margin" />
+
     </android.support.v4.widget.SwipeRefreshLayout>
-
-
 </android.support.design.widget.CoordinatorLayout>

@@ -14,29 +14,36 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<!-- TODO colors go in the sytles.xml file -->
 <resources>
 
-    <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
-
-    </style>
-
-    <style name="Theme.Bacon.Detail">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
-    <style name="Theme.XYZTheme" parent="Base.Theme.XYZTheme">
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
-
-    <style name="Base.Theme.XYZTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.XYZTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
 
+    <style name="Theme.XYZTheme.activity_list_actionbar" parent="Base.Theme.XYZTheme">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:background">@color/theme_background</item>
+    </style>
+
+
+    <style name="Theme.XYZTheme.card" parent="Base.Theme.XYZTheme">
+        <item name="android:layout_marginTop">4dp</item>
+
+    </style>
+    <style name="Theme.XYZTheme.card.text" parent="Base.Theme.XYZTheme">
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">5</item>
+
+
     </style>
 
 </resources>

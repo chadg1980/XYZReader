@@ -10,9 +10,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.*;
+import android.support.v7.widget.DividerItemDecoration;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -57,9 +56,6 @@ public class ArticleListActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_article_list);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
-
         final View toolbarContainerView = findViewById(R.id.appbar_container);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
@@ -118,6 +114,11 @@ public class ArticleListActivity extends AppCompatActivity implements
         int columnCount = getResources().getInteger(R.integer.list_column_count);
         StaggeredGridLayoutManager sglm =
                 new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
+        sglm.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
+        DividerItemDecoration di = new DividerItemDecoration(this, 1);
+
+
+
         mRecyclerView.setLayoutManager(sglm);
     }
 

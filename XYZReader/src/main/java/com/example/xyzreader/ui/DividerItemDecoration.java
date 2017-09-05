@@ -36,11 +36,17 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private Drawable mDivider;
 
     private int mOrientation;
+    private int mSpace;
 
+    public DividerItemDecoration(Context c,  int space){
+        this.mSpace = space;
+    }
+/*
     public DividerItemDecoration(Context context, Drawable divider, int orientation) {
         mDivider = divider;
         setOrientation(orientation);
     }
+    */
 
     public void setOrientation(int orientation) {
         if (orientation != HORIZONTAL_LIST && orientation != VERTICAL_LIST) {
@@ -98,4 +104,6 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
             outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
         }
     }
+
+
 }
