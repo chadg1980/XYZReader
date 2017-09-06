@@ -117,9 +117,6 @@ public class ArticleListActivity extends AppCompatActivity implements
                 new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
         sglm.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
         DividerItemDecoration di = new DividerItemDecoration(this, 1);
-
-
-
         mRecyclerView.setLayoutManager(sglm);
     }
 

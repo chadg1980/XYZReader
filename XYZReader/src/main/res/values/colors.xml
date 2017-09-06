@@ -25,4 +25,5 @@
     <color name="black">#000</color>
     <color name="text_white">#FFF</color>
     <color name="scrim">#33000000</color>
+    <color name="background_red">#FF0000</color>
 </resources>
