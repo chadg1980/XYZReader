@@ -120,5 +120,19 @@
         android:layout_height="match_parent" />
     </LinearLayout>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:background="@color/theme_accent"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_share"
+        app:elevation="@dimen/fab_elevation"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
+        android:contentDescription="@string/action_share"
+        android:clickable="true"/>
+
 
 </android.support.design.widget.CoordinatorLayout>
